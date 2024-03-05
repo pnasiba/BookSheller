@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.logoName {
+    font-family: "Dancing Script", cursive;
+}
+
+.rubik-font {
+    font-family: "Rubik", sans-serif;
+}

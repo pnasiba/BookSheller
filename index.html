@@ -3,16 +3,55 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Fav icon -->
+        <link rel="icon" href="./assets/images/logo.svg">
+        <!-- Bootstrap icon -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Tailwind Link -->
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- css file -->
         <link rel="stylesheet" href="./styles/output.css" />
+        <link rel="stylesheet" href="./styles/index.css">
         <title>BookSheller</title>
     </head>
     <body>
-        <h1 class="text-green-600">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptate necessitatibus commodi, dolores
-            recusandae ullam facere pariatur sequi, possimus quos doloribus culpa ipsum mollitia, repellendus velit
-            exercitationem numquam quam maxime.
-        </h1>
+        <main >
+            <section class="bg-black opacity-80">
+
+                <div class="container px-4 mx-auto ">
+
+
+                    <div class="w-full min-h-screen grid place-content-center ">
+                    
+                        <div class="flex items-center gap-[15px] mb-[51px] w-[300px] mx-auto">
+                            <img src="./assets/images/logo2.svg" alt="logo">
+                            <h1 class="text-4xl logo-name text-white">BookShelter</h1>
+                        </div>
+                    
+                        <form id="login-form">
+                            <label for="username"  
+                                class="flex gap-[19px] items-center border-2 border-white py-[12px] pl-[12px] rounded-[4px] mb-[20px] pr-[10px]">
+                                <i class="bi bi-person text-2xl text-white"></i>
+                                <input id="username" type="text" placeholder="USERNAME" class="outline-none w-[300px] focus:outline-none bg-black focus:bg-black">
+                            </label>
+                    
+                            <label for="password"  
+                                class="flex gap-[19px] items-center border-2 border-white py-[12px] pl-[12px] rounded-[4px] mb-[43px] pr-[10px]">
+                                <i class="bi bi-lock text-2xl text-white"></i>
+                                <input id="password" type="password" placeholder="PASSWORD" class="outline-none w-[300px] focus:outline-none bg-black focus:bg-black">
+                            </label>
+                    
+                            <button type="submit"
+                                class="loginBtn py-[12px] text-center w-full bg-white rounded-[4px] text-[#0d75ff] mb-[23px] font-semibold text-[20px]">LOGIN</button>
+                            <p class="forgot-password text-right text-white font-medium">Forgot password?</p>
+                        </form>
+                    
+                    </div>
+                </div>
+
+            </section>
+        </main>
     </body>
+    <script src="./js/utils.js"></script>
+    <script src="./js/login.js"></script>
 </html>
