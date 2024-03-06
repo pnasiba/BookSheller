@@ -7,12 +7,12 @@ let resultNumber = $("#resultNumber");
 // ------------------- Fetch Render -------------------
 
 function fetchRender() {
-  fetch("https://www.googleapis.com/books/v1/volumes?q=a&maxResults=40")
+  fetch("https://www.googleapis.com/books/v1")
     .then((res) => res.json())
     .then((data) => {
       books = data.items;
       renderUi(books);
-      resultNumber.textContent = `Showing ${data.totalItems} Result(s)`;
+      resultNumber.textContent = `Showing ${totalItems} Result(s)`;
     });
 }
 
@@ -93,11 +93,30 @@ globalSearch();
   let token = localStorage.getItem("token");
 
   if (!token) {
-    window.location.href = "../index.html";
+    window.location.href = "../pages/login.html";
   }
 })();
 
 function logOut() {
   localStorage.removeItem("token");
-  window.location.href = "../index.html";
+  window.location.href = "../pages/login.html";
 }
+
+
+
+darcBtn.addEventListener("click", () => {
+  darcBtn.classList.toggle("darc-btn");
+  if (darcBtn.classList.contains("darc-btn")) {
+    darcBtn.innerHTML = `<i class="bi bi-brightness-low-fill text-amber-300 text-[28px]"></i>`;
+    document.body.style.backgroundColor = `rgb(2, 2, 39)`;
+    document.body.style.color = `#FFF`;
+    logo.src = `./assets/images/logo.svg`;
+    searchIcon.style.color = `#FFF`;
+  } else {
+    darcBtn.innerHTML = `<i class="bi bi-moon-stars-fill text-amber-300 text-[22px]"></i>`;
+    document.body.style.backgroundColor = `#FFF`;
+    document.body.style.color = `#000`;
+    logo.src = `./assets/images/logo2.svg`;
+    searchIcon.style.color = `rgba(0,0,0,0.24)`;
+  }
+});

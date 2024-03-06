@@ -10,13 +10,13 @@
         <!-- Tailwind Link -->
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- css file -->
-        <link rel="stylesheet" href="./styles/output.css" />
-        <link rel="stylesheet" href="./styles/index.css">
-        <title>BookSheller</title>
+        <link rel="stylesheet" href="../styles/output.css" />
+        <link rel="stylesheet" href="../styles/login.css">
+        <title>BookShelter</title>
     </head>
     <body>
         <main >
-            <section class="bg-black opacity-80">
+            <section>
 
                 <div class="container px-4 mx-auto ">
 
@@ -24,7 +24,7 @@
                     <div class="w-full min-h-screen grid place-content-center ">
                     
                         <div class="flex items-center gap-[15px] mb-[51px] w-[300px] mx-auto">
-                            <img src="./assets/images/logo2.svg" alt="logo">
+                            <img src="../assets/images/logo2.svg" alt="logo">
                             <h1 class="text-4xl logo-name text-white">BookShelter</h1>
                         </div>
                     
@@ -32,13 +32,13 @@
                             <label for="username"  
                                 class="flex gap-[19px] items-center border-2 border-white py-[12px] pl-[12px] rounded-[4px] mb-[20px] pr-[10px]">
                                 <i class="bi bi-person text-2xl text-white"></i>
-                                <input id="username" type="text" placeholder="USERNAME" class="outline-none w-[300px] focus:outline-none bg-transparent text-[#fff]">
+                                <input id="username" type="text" placeholder="USERNAME" class="outline-none w-[300px] focus:outline-none focus:bg-transparent appearance-none bg-none focus:placeholder:bg-[url(../assets/images/bg-main.jpg)] active:bg-transparent bg-transparent text-white">
                             </label>
                     
                             <label for="password"  
                                 class="flex gap-[19px] items-center border-2 border-white py-[12px] pl-[12px] rounded-[4px] mb-[43px] pr-[10px]">
                                 <i class="bi bi-lock text-2xl text-white"></i>
-                                <input id="password" type="password" placeholder="PASSWORD" class="outline-none w-[300px] focus:outline-none bg-transparent">
+                                <input id="password" type="password" placeholder="PASSWORD" class="outline-none w-[300px] focus:bg-transparent active:bg-transparent bg-transparent text-white focus:outline-none">
                             </label>
                     
                             <button type="submit"
@@ -55,6 +55,6 @@
             </section>
         </main>
     </body>
-    <script src="./js/utils.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/login.js"></script>
 </html>

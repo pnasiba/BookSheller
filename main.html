@@ -60,20 +60,23 @@
     <main class="pt-[0px] z-0  flex">
 
         <aside id="aside" class="max-w-[268px] absolute md:static bg-white shadow-md min-h-screen">
-            <ul class="nav-menu p-[25px]">
 
-                <li class="rubik-font mb-[5px] text-2xl font-medium">Bookmarks</li>
-                <li class="rubik-font mb-[25px]">If you don’t like to read, you haven’t found the right book</li>
+            <div class="p-[25px]">
+                <h2 class="rubik-font mb-[5px] text-2xl font-medium">Bookmarks</h2>
+                <p class="rubik-font mb-[25px]">If you don’t like to read, you haven’t found the right book</p>
+            </div>
+
+            <ul class="nav-menu px-[25px]" id="bookmark">
 
                 <li class="flex items-center justify-between bg-[#F8FAFD] py-[15px] px-[10px] rounded-[4px] mb-[15px]">
-                    <div>
+                    <span>
                         <p class="rubik-font font-medium">Python</p>
                         <p class="font-[Noto Sans, sans-serif] text-[#757881] text-[13px]">David M. Beazley</p>
-                    </div>
-                    <div class="flex gap-[6px]">
+                    </span>
+                    <span class="flex gap-[6px]">
                         <i class="bi bi-book text-[#75828A] text-xl"></i>
                         <i class="bi bi-x-square text-[#FF6231] text-xl"></i>
-                    </div>
+                    </span>
                 </li>
 
                 <li class="flex items-center justify-between bg-[#F8FAFD] py-[15px] px-[10px] rounded-[4px] mb-[15px]">
@@ -104,6 +107,7 @@
         <section id="main" class="w-full p-[40px] bg-[#F8FAFD] ">
 
             <div class="flex gap-[33px] flex-wrap books__wrapper">
+                <span class="loader"></span>
                 <!-- dynamic cards -->
                 <!-- <div class="bg-white py-[13px] px-[12px] rounded-[5px] shadow-md">
                         <div class="py-[14px] bg-[#F8FAFD] rounded-[5px] px-[20px]">
