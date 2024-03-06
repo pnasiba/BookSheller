@@ -35,6 +35,7 @@ async function authorization() {
       }
     }
   } catch (err) {
+    alert(err.message)
     console.log("this is problem:", err);
   }
 }
