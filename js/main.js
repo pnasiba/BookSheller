@@ -47,10 +47,12 @@ function renderData(arr) {
              ? item.volumeInfo.title.slice(0, 22) + "..."
              : item.volumeInfo.title
          }</p>
-        <p class="font-medium text-[13px] text-[#757881]">${item.volumeInfo.authors[0].substring(
-          0,
-          20
-        )}</p>
+        <p class="font-medium text-[13px] text-[#757881]">${
+          item.volumeInfo.authors && item.volumeInfo.authors.length > 0
+            ? item.volumeInfo.authors[0].substring(0, 25)
+            : ""
+        }</p>
+
         <p class="font-medium text-[13px] text-[#757881] mb-[10px]">${
           item.volumeInfo.publishedDate
         }</p>
@@ -61,7 +63,9 @@ function renderData(arr) {
             <button class="read-more text-[#0D75FF] py-[10px] px-[20px] font-medium rounded-[4px] bg-[#0D75FF0D]">More Info</button>
         </div>
        <button class="w-[200px]">
-       <a href="${item.volumeInfo.previewLink}" target="_blank" class="bg-[#75828A] font-medium text-white py-[10px] px-[103px] rounded-[4px]">Read</a>
+       <a href="${
+         item.volumeInfo.previewLink
+       }" target="_blank" class="bg-[#75828A] font-medium text-white py-[10px] px-[103px] rounded-[4px]">Read</a>
        </button>
             `
     );
@@ -261,7 +265,6 @@ async function searchBook(id) {
 
 closeBtn.addEventListener("click", ()=>{
     toggleWrapper.classList.toggle("hide-toggle-menu");
-
 })
 
 
