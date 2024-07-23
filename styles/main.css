@@ -34,7 +34,7 @@
 }
 
 
-.hide-toggle-menu{
-transform: translateX(200%);
-transition: all 0.3s linear;
+.hide-toggle-menu {
+    transform: translateX(200%);
+    transition: all 0.3s linear;
 }
